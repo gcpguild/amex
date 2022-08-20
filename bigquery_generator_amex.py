@@ -34,7 +34,7 @@ For SerpAPI Key request, please write an email request with an email subject of 
 
 """
 #-----------------------------------------------------#-----------------------------------------------------
-githubserpaijson = "https://github.com/gcpguild/searpapi/blob/main/parseserpapijsongooglecloud.py"
+githubserpaijson = "https://github.com/gcpguild/amex/blob/main/bigquery_generator_amex.py"
 
 import json, re, csv, os, unicodedata, requests, string, platform
 import ijson
