@@ -61,10 +61,9 @@ from subprocess import check_output
 projectID="hci-project-313508"
 dataset="amex_credit_card"
 URI = "gs://nature_labs/train/train_data.csv"
-ext_table_name = tbl = "amex_customers"
-
-
+tbl = "amex_customers"
 cust_type = 'train'
+ext_table_name = ("{}_{}".format(tbl,cust_type))
 #---------------------------------------------------------------
 def removen(string):
     for m in ('\n', '\r'):
@@ -211,8 +210,6 @@ mylist = [ basedir, 'output' , bqf]
 
 bqfile = fullyqualifydirs(mylist)
 
-
-     
 L=[]
 lc=1
 ll=len(fldnames)
