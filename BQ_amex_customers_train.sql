@@ -1,7 +1,7 @@
 CREATE EXTERNAL TABLE `hci-project-313508.amex_credit_card.amex_customers`
 (
 		customer_ID STRING,
-		S_2 STRING,
+		S_2 DATE,
 		P_2 FLOAT64,
 		D_39 FLOAT64,
 		B_1 FLOAT64,
