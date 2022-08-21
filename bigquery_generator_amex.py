@@ -60,9 +60,9 @@ from subprocess import check_output
 #----------------------------------------------------------
 projectID="hci-project-313508"
 dataset="amex_credit_card"
-URI = "gs://nature_labs/train/train_data.csv"
+URI = "gs://nature_labs/train_labels/test_labels.csv"
 tbl = "amex_customers"
-cust_type = 'train'
+cust_type = 'test'
 ext_table_name = ("{}_{}".format(tbl,cust_type))
 #---------------------------------------------------------------
 def removen(string):
@@ -133,7 +133,7 @@ getdirectory = removen(check_output([sys.executable, initialdirectoryconfig], un
 myoutdir = [basedir, 'output' ]
 outputdir = mkingdirs(myoutdir)
 
-mylist = [ getdirectory, 'train' ]
+mylist = [ getdirectory, 'test' ]
 
 csv_in_path_to_dir = find_csv_filenames( path_to_dir = fullyqualifydirs(mylist))
 
@@ -142,7 +142,7 @@ serpapijsongooglecloud = csv_in_path_to_dir
 n = 7
 for l in serpapijsongooglecloud:
 
-    mylist = [ getdirectory,'train', l ]
+    mylist = [ getdirectory,'test', l ]
     googlecloudservicecsv = fullyqualifydirs(mylist)
 
    
@@ -177,7 +177,7 @@ def switch(check_data_type):
 datearray=['date', 'DATE', 'Date']
 fldnames=[]
 for fld in colname:
-
+   
     for cdatesrt in (datearray):
         check_date_return = fld.find(cdatesrt)
         check_date_lu=cdatesrt
