@@ -60,7 +60,7 @@ from subprocess import check_output
 #----------------------------------------------------------
 projectID="hci-project-313508"
 dataset="amex_credit_card"
-URI = "gs://nature_labs/train_labels/test_labels.csv"
+URI = "gs://nature_labs/test/test_data.csv"
 tbl = "amex_customers"
 cust_type = 'test'
 ext_table_name = ("{}_{}".format(tbl,cust_type))
